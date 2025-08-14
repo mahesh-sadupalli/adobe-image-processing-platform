@@ -7,15 +7,15 @@
 [![AWS](https://img.shields.io/badge/AWS-S3%20Integration-yellow.svg)](https://aws.amazon.com/s3/)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-**Built by [Mahesh Sadupalli](mailto:mahesh.sadupalli@gmail.com) • Portfolio project for Adobe Application**
+**Built by [Mahesh Sadupalli](mailto:mahesh.sadupalli@gmail.com)**
 
 ---
 
-##  **Project Overview**
+## Project Overview
 
 A production-ready, cloud-native image processing platform that demonstrates enterprise-level software engineering skills. Built specifically to showcase capabilities relevant to Adobe's Cloud Platform team, this project combines advanced computer vision algorithms with modern microservices architecture.
 
-### **Key Highlights**
+### Key Highlights
 - **Advanced Computer Vision**: Edge detection, image filters, smart resizing
 - **Microservices Architecture**: Spring Boot with containerized deployment
 - **Cloud Integration**: AWS S3 storage with LocalStack simulation
@@ -24,7 +24,17 @@ A production-ready, cloud-native image processing platform that demonstrates ent
 
 ---
 
-## **Architecture**
+## Web Interface
+
+### Upload and Processing Interface
+![Upload Interface](images/upload-interface.png)
+
+### Real-time Processing Results
+![Processing Results](images/processing-results.png)
+
+---
+
+## Architecture
 
 ```
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
@@ -45,23 +55,23 @@ A production-ready, cloud-native image processing platform that demonstrates ent
 
 ---
 
-## **Features**
+## Features
 
-### **Core Functionality**
+### Core Functionality
 - **Multi-format Image Upload**: JPEG, PNG, GIF, WebP support
 - **Real-time Processing**: Instant image transformations
 - **Metadata Extraction**: Dimensions, color analysis, file properties
 - **Cloud Storage**: Seamless AWS S3 integration
 - **Batch Operations**: Multiple image processing
 
-### **Computer Vision Algorithms**
+### Computer Vision Algorithms
 - **Edge Detection**: Sobel-like algorithm implementation
 - **Image Filters**: Blur, sharpen, brightness adjustment
 - **Smart Resizing**: High-quality scaling with anti-aliasing
 - **Thumbnail Generation**: Aspect-ratio preserving thumbnails
 - **Format Conversion**: Cross-format image transformation
 
-### **Enterprise Features**
+### Enterprise Features
 - **Microservices Design**: Independent, scalable services
 - **Health Monitoring**: Comprehensive service health checks
 - **Load Balancing**: Nginx reverse proxy configuration
@@ -70,7 +80,7 @@ A production-ready, cloud-native image processing platform that demonstrates ent
 
 ---
 
-## **Technology Stack**
+## Technology Stack
 
 | Layer | Technologies |
 |-------|-------------|
@@ -85,21 +95,21 @@ A production-ready, cloud-native image processing platform that demonstrates ent
 
 ---
 
-## **Quick Start**
+## Quick Start
 
-### **Prerequisites**
+### Prerequisites
 - Java 17+
 - Maven 3.8+
 - Docker & Docker Compose
 - Git
 
-### **1. Clone & Setup**
+### 1. Clone & Setup
 ```bash
-git clone https://github.com/YourUsername/adobe-image-platform.git
-cd adobe-image-platform
+git clone https://github.com/mahesh-sadupalli/adobe-image-processing-platform.git
+cd adobe-image-processing-platform
 ```
 
-### **2. Build Application**
+### 2. Build Application
 ```bash
 # Build JAR files
 mvn clean package -DskipTests
@@ -108,7 +118,7 @@ mvn clean package -DskipTests
 docker-compose up --build -d
 ```
 
-### **3. Initialize AWS Services**
+### 3. Initialize AWS Services
 ```bash
 # Start LocalStack (separate terminal)
 docker run --rm -it -p 4566:4566 localstack/localstack
@@ -117,16 +127,16 @@ docker run --rm -it -p 4566:4566 localstack/localstack
 curl -X PUT http://localhost:4566/adobe-images
 ```
 
-### **4. Access Application**
+### 4. Access Application
 - **Web Interface**: http://localhost/
 - **API Documentation**: http://localhost:8080/
 - **Health Status**: http://localhost/health
 
 ---
 
-## **API Endpoints**
+## API Endpoints
 
-### **Core Upload API**
+### Core Upload API
 ```bash
 # Upload single image with metadata extraction
 POST /upload/image
@@ -137,7 +147,7 @@ POST /upload/images/batch
 Content-Type: multipart/form-data
 ```
 
-### **Advanced Processing APIs**
+### Advanced Processing APIs
 ```bash
 # Resize image to specific dimensions
 POST /api/v1/process/resize?width=800&height=600
@@ -160,15 +170,15 @@ POST /api/v1/process/filter/grayscale
 
 ---
 
-## **Testing & Demo**
+## Testing & Demo
 
-### **Upload Test Image**
+### Upload Test Image
 ```bash
 curl -X POST -F "file=@sample-image.jpg" \
   http://localhost/upload/image
 ```
 
-### **Process with Computer Vision**
+### Process with Computer Vision
 ```bash
 # Edge detection (showcases CV expertise)
 curl -X POST -F "file=@sample-image.jpg" \
@@ -180,7 +190,7 @@ curl -X POST -F "file=@sample-image.jpg" -F "size=150" \
   http://localhost/api/v1/process/thumbnail
 ```
 
-### **Expected Response**
+### Expected Response
 ```json
 {
   "success": true,
@@ -202,16 +212,16 @@ curl -X POST -F "file=@sample-image.jpg" -F "size=150" \
 
 ---
 
-## **Web Interface Features**
+## Web Interface Features
 
-### **Modern UI/UX**
+### Modern UI/UX
 - **Drag & Drop Upload**: Intuitive file selection
 - **Real-time Preview**: Instant image display
 - **Interactive Controls**: Sliders for filter intensity
 - **Result Gallery**: Organized processed images
 - **Download Links**: Direct access to results
 
-### **Professional Design**
+### Professional Design
 - **Adobe-Inspired Styling**: Clean, modern aesthetics
 - **Responsive Layout**: Works on all devices
 - **Loading Indicators**: User feedback during processing
@@ -219,9 +229,9 @@ curl -X POST -F "file=@sample-image.jpg" -F "size=150" \
 
 ---
 
-## **Docker Deployment**
+## Docker Deployment
 
-### **Services Overview**
+### Services Overview
 ```yaml
 services:
   nginx:         # Load balancer (Port 80)
@@ -231,14 +241,14 @@ services:
   localstack:    # AWS simulation (Port 4566)
 ```
 
-### **Production Configuration**
+### Production Configuration
 - **Multi-stage builds** for optimized image sizes
 - **Health checks** for all services
 - **Non-root execution** for security
 - **Resource limits** and restart policies
 - **Volume persistence** for data
 
-### **Monitoring & Observability**
+### Monitoring & Observability
 ```bash
 # Check all services
 docker-compose ps
@@ -252,21 +262,21 @@ curl http://localhost/health
 
 ---
 
-## **Enterprise Architecture Patterns**
+## Enterprise Architecture Patterns
 
-### **Design Principles**
+### Design Principles
 - **Microservices**: Independent, scalable services
 - **Domain-Driven Design**: Clear service boundaries  
 - **SOLID Principles**: Clean, maintainable code
 - **Dependency Injection**: Testable architecture
 
-### **Cloud-Native Features**
+### Cloud-Native Features
 - **Containerization**: Docker multi-stage builds
 - **Service Discovery**: Spring Cloud ready
 - **Configuration Management**: Environment-based config
 - **Circuit Breakers**: Fault tolerance ready
 
-### **Security & Reliability**
+### Security & Reliability
 - **Input Validation**: Comprehensive file validation
 - **Error Handling**: Graceful failure handling
 - **Resource Management**: Connection pooling
@@ -274,18 +284,18 @@ curl http://localhost/health
 
 ---
 
-## **Adobe-Specific Alignment**
+## Adobe-Specific Alignment
 
 This project directly demonstrates skills relevant to Adobe's Cloud Platform:
 
-### **Core Competencies**
+### Core Competencies
 - **Java & Spring Boot**: Adobe's primary backend stack
 - **Microservices Architecture**: Scalable, maintainable design
 - **Computer Vision**: Relevant to Adobe's creative tools
 - **Cloud Integration**: Enterprise infrastructure experience
 - **Performance & Scale**: Production-grade considerations
 
-### **Business Value**
+### Business Value
 - **Creative Workflow Integration**: Seamless image processing
 - **Cloud-First Architecture**: Modern deployment patterns
 - **Developer Experience**: Clean APIs and documentation
@@ -293,15 +303,15 @@ This project directly demonstrates skills relevant to Adobe's Cloud Platform:
 
 ---
 
-## **Performance Metrics**
+## Performance Metrics
 
-### **Processing Capabilities**
+### Processing Capabilities
 - **Image Sizes**: Up to 50MB per file
 - **Concurrent Users**: Nginx load balancing ready
 - **Processing Speed**: Sub-second for standard operations
 - **Memory Efficiency**: Optimized JVM settings
 
-### **Scalability Features**
+### Scalability Features
 - **Horizontal Scaling**: Service replication ready
 - **Caching Strategy**: Redis integration
 - **Database Optimization**: Connection pooling
@@ -309,7 +319,7 @@ This project directly demonstrates skills relevant to Adobe's Cloud Platform:
 
 ---
 
-## **Security Considerations**
+## Security Considerations
 
 - **Input Validation**: File type and size restrictions
 - **Container Security**: Non-root user execution
@@ -318,28 +328,28 @@ This project directly demonstrates skills relevant to Adobe's Cloud Platform:
 
 ---
 
-## **Future Enhancements**
+## Future Enhancements
 
-### **Advanced Features**
-- [ ] **Machine Learning Integration**: TensorFlow image classification
-- [ ] **Real-time WebSocket**: Live processing updates
-- [ ] **API Gateway**: Centralized routing and authentication
-- [ ] **Kubernetes Deployment**: Production orchestration
-- [ ] **CI/CD Pipeline**: GitHub Actions automation
+### Advanced Features
+- **Machine Learning Integration**: TensorFlow image classification
+- **Real-time WebSocket**: Live processing updates
+- **API Gateway**: Centralized routing and authentication
+- **Kubernetes Deployment**: Production orchestration
+- **CI/CD Pipeline**: GitHub Actions automation
 
-### **Monitoring & Observability**
-- [ ] **Metrics Collection**: Prometheus integration
-- [ ] **Distributed Tracing**: Request flow monitoring
-- [ ] **Log Aggregation**: ELK stack integration
-- [ ] **Performance Monitoring**: APM integration
+### Monitoring & Observability
+- **Metrics Collection**: Prometheus integration
+- **Distributed Tracing**: Request flow monitoring
+- **Log Aggregation**: ELK stack integration
+- **Performance Monitoring**: APM integration
 
 ---
 
-## **Contributing**
+## Contributing
 
 This is a portfolio project showcasing enterprise Java development skills for Adobe application consideration.
 
-### **Local Development**
+### Local Development
 ```bash
 # Run services individually for development
 mvn spring-boot:run -pl upload-service
@@ -353,8 +363,6 @@ mvn clean package
 
 ---
 
-## 📝 **License**
+## License
 
 MIT License - see [LICENSE](LICENSE) file for details.
-
----
