@@ -11,11 +11,11 @@
 
 ---
 
-## 🎯 **Project Overview**
+##  **Project Overview**
 
 A production-ready, cloud-native image processing platform that demonstrates enterprise-level software engineering skills. Built specifically to showcase capabilities relevant to Adobe's Cloud Platform team, this project combines advanced computer vision algorithms with modern microservices architecture.
 
-### **🔥 Key Highlights**
+### ** Key Highlights**
 - **Advanced Computer Vision**: Edge detection, image filters, smart resizing
 - **Microservices Architecture**: Spring Boot with containerized deployment
 - **Cloud Integration**: AWS S3 storage with LocalStack simulation
@@ -24,7 +24,7 @@ A production-ready, cloud-native image processing platform that demonstrates ent
 
 ---
 
-## 🏗️ **Architecture**
+## **Architecture**
 
 ```
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
@@ -45,23 +45,23 @@ A production-ready, cloud-native image processing platform that demonstrates ent
 
 ---
 
-## 🚀 **Features**
+## **Features**
 
-### **💻 Core Functionality**
+### ** Core Functionality**
 - **Multi-format Image Upload**: JPEG, PNG, GIF, WebP support
 - **Real-time Processing**: Instant image transformations
 - **Metadata Extraction**: Dimensions, color analysis, file properties
 - **Cloud Storage**: Seamless AWS S3 integration
 - **Batch Operations**: Multiple image processing
 
-### **🎨 Computer Vision Algorithms**
+### ** Computer Vision Algorithms**
 - **Edge Detection**: Sobel-like algorithm implementation
 - **Image Filters**: Blur, sharpen, brightness adjustment
 - **Smart Resizing**: High-quality scaling with anti-aliasing
 - **Thumbnail Generation**: Aspect-ratio preserving thumbnails
 - **Format Conversion**: Cross-format image transformation
 
-### **🏢 Enterprise Features**
+### ** Enterprise Features**
 - **Microservices Design**: Independent, scalable services
 - **Health Monitoring**: Comprehensive service health checks
 - **Load Balancing**: Nginx reverse proxy configuration
@@ -70,7 +70,7 @@ A production-ready, cloud-native image processing platform that demonstrates ent
 
 ---
 
-## 🛠️ **Technology Stack**
+## **Technology Stack**
 
 | Layer | Technologies |
 |-------|-------------|
@@ -85,7 +85,7 @@ A production-ready, cloud-native image processing platform that demonstrates ent
 
 ---
 
-## 🚀 **Quick Start**
+## **Quick Start**
 
 ### **Prerequisites**
 - Java 17+
@@ -124,7 +124,7 @@ curl -X PUT http://localhost:4566/adobe-images
 
 ---
 
-## 📊 **API Endpoints**
+## **API Endpoints**
 
 ### **Core Upload API**
 ```bash
@@ -160,7 +160,7 @@ POST /api/v1/process/filter/grayscale
 
 ---
 
-## 🧪 **Testing & Demo**
+## **Testing & Demo**
 
 ### **Upload Test Image**
 ```bash
@@ -202,7 +202,7 @@ curl -X POST -F "file=@sample-image.jpg" -F "size=150" \
 
 ---
 
-## 🎨 **Web Interface Features**
+## **Web Interface Features**
 
 ### **Modern UI/UX**
 - **Drag & Drop Upload**: Intuitive file selection
@@ -219,7 +219,7 @@ curl -X POST -F "file=@sample-image.jpg" -F "size=150" \
 
 ---
 
-## 🐋 **Docker Deployment**
+## **Docker Deployment**
 
 ### **Services Overview**
 ```yaml
@@ -252,7 +252,7 @@ curl http://localhost/health
 
 ---
 
-## 🏢 **Enterprise Architecture Patterns**
+## **Enterprise Architecture Patterns**
 
 ### **Design Principles**
 - **Microservices**: Independent, scalable services
@@ -274,16 +274,16 @@ curl http://localhost/health
 
 ---
 
-## 🎯 **Adobe-Specific Alignment**
+## **Adobe-Specific Alignment**
 
 This project directly demonstrates skills relevant to Adobe's Cloud Platform:
 
 ### **Core Competencies**
-- ✅ **Java & Spring Boot**: Adobe's primary backend stack
-- ✅ **Microservices Architecture**: Scalable, maintainable design
-- ✅ **Computer Vision**: Relevant to Adobe's creative tools
-- ✅ **Cloud Integration**: Enterprise infrastructure experience
-- ✅ **Performance & Scale**: Production-grade considerations
+- **Java & Spring Boot**: Adobe's primary backend stack
+- **Microservices Architecture**: Scalable, maintainable design
+- **Computer Vision**: Relevant to Adobe's creative tools
+- **Cloud Integration**: Enterprise infrastructure experience
+- **Performance & Scale**: Production-grade considerations
 
 ### **Business Value**
 - **Creative Workflow Integration**: Seamless image processing
@@ -293,7 +293,7 @@ This project directly demonstrates skills relevant to Adobe's Cloud Platform:
 
 ---
 
-## 📈 **Performance Metrics**
+## **Performance Metrics**
 
 ### **Processing Capabilities**
 - **Image Sizes**: Up to 50MB per file
@@ -309,7 +309,7 @@ This project directly demonstrates skills relevant to Adobe's Cloud Platform:
 
 ---
 
-## 🛡️ **Security Considerations**
+## **Security Considerations**
 
 - **Input Validation**: File type and size restrictions
 - **Container Security**: Non-root user execution
@@ -318,7 +318,7 @@ This project directly demonstrates skills relevant to Adobe's Cloud Platform:
 
 ---
 
-## 🔮 **Future Enhancements**
+## **Future Enhancements**
 
 ### **Advanced Features**
 - [ ] **Machine Learning Integration**: TensorFlow image classification
@@ -335,7 +335,7 @@ This project directly demonstrates skills relevant to Adobe's Cloud Platform:
 
 ---
 
-## 🤝 **Contributing**
+## **Contributing**
 
 This is a portfolio project showcasing enterprise Java development skills for Adobe application consideration.
 
@@ -358,21 +358,3 @@ mvn clean package
 MIT License - see [LICENSE](LICENSE) file for details.
 
 ---
-
-## 👨‍💻 **Developer**
-
-**Mahesh Sadupalli**
-- 📧 Email: mahesh.sadupalli@gmail.com
-- 💼 LinkedIn: [Your LinkedIn Profile]
-- 🌐 GitHub: [Your GitHub Profile]
-- 📍 Location: Cottbus, Brandenburg, DE
-
-*Currently pursuing M.Sc. Artificial Intelligence at BTU Cottbus-Senftenberg with extensive experience in computer vision and backend development.*
-
----
-
-## 🎯 **Project Motivation**
-
-Built to demonstrate enterprise-level Java development capabilities specifically aligned with Adobe's Cloud Platform team requirements. This project showcases the intersection of computer vision expertise with modern cloud-native architecture.
-
-**Ready for Production • Built for Scale • Designed for Adobe** 🚀
