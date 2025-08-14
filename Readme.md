@@ -47,21 +47,21 @@ A production-ready, cloud-native image processing platform that demonstrates ent
 
 ## **Features**
 
-### ** Core Functionality**
+### **Core Functionality**
 - **Multi-format Image Upload**: JPEG, PNG, GIF, WebP support
 - **Real-time Processing**: Instant image transformations
 - **Metadata Extraction**: Dimensions, color analysis, file properties
 - **Cloud Storage**: Seamless AWS S3 integration
 - **Batch Operations**: Multiple image processing
 
-### ** Computer Vision Algorithms**
+### **Computer Vision Algorithms**
 - **Edge Detection**: Sobel-like algorithm implementation
 - **Image Filters**: Blur, sharpen, brightness adjustment
 - **Smart Resizing**: High-quality scaling with anti-aliasing
 - **Thumbnail Generation**: Aspect-ratio preserving thumbnails
 - **Format Conversion**: Cross-format image transformation
 
-### ** Enterprise Features**
+### **Enterprise Features**
 - **Microservices Design**: Independent, scalable services
 - **Health Monitoring**: Comprehensive service health checks
 - **Load Balancing**: Nginx reverse proxy configuration
