@@ -15,7 +15,7 @@
 
 A production-ready, cloud-native image processing platform that demonstrates enterprise-level software engineering skills. Built specifically to showcase capabilities relevant to Adobe's Cloud Platform team, this project combines advanced computer vision algorithms with modern microservices architecture.
 
-### ** Key Highlights**
+### **Key Highlights**
 - **Advanced Computer Vision**: Edge detection, image filters, smart resizing
 - **Microservices Architecture**: Spring Boot with containerized deployment
 - **Cloud Integration**: AWS S3 storage with LocalStack simulation
