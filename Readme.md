@@ -27,10 +27,10 @@ A production-ready, cloud-native image processing platform that demonstrates ent
 ## Web Interface
 
 ### Upload and Processing Interface
-![Upload Interface]("images/Web Interface.png")
+![Upload Interface](images/Web%20Interface.png)
 
 ### Real-time Processing Results
-![Processing Results]("images/Web Interface after applied effects.png")
+![Processing Results](images/Web%20Interface%20after%20applied%20effects.png)
 
 ---
 
